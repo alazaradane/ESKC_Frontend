@@ -1,0 +1,494 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    width: 100%;
+    background: #eceaea;
+    position: relative;
+    display: flex;
+}
+
+
+#menu{
+    width: 300px;
+    height: 100%;
+    background: #111827;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#menu .logo{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 30px 0 0 30px;
+}
+#menu .logo img{
+    width: 4rem;
+    height: 4rem;
+    margin-right: 15px;
+    border-radius: 100%;
+}
+
+#menu .items {
+    margin-top: 40px;
+}
+
+#menu .items li{
+    list-style: none;
+    padding: 15px 0;
+    transition: 0.3s ease;
+    white-space: pre;
+}
+#menu .items .logout a{
+    color: rgb(202, 32, 32);
+}
+
+#menu .items li:hover{
+    background: #253047;
+    cursor: pointer;
+}
+#menu .items li:nth-child(1){
+    border-left: 4px solid #fff;
+}
+
+#menu .items li i{
+    color: rgb(134, 141, 151);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 10px 0 25px;
+}
+
+#menu .items li:hover i,
+#menu .items li:hover a{
+    color: #f3f4f6;
+}
+#menu .items li:hover a:nth-child(3){
+    color:rgb(202, 32, 32);
+}
+
+#menu .items li a{
+    text-decoration: none;
+    font-weight: 300px;
+    color: rgb(134, 141, 151); 
+    margin-left: 12px;
+    transition: 0.3s ease;
+}
+
+
+
+#interface {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    position: relative;
+}
+
+#interface .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px 30px;
+    border-bottom: 3px solid #594ef7;
+    position: fixed;
+    width: calc(100% - 300px);
+}
+
+#interface .navigation .search{
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px;
+    border: 1px solid #d7dbe6;
+    border-radius: 4px;
+}
+
+#interface .navigation .search i{
+    margin-right: 14px;
+}
+
+#interface .navigation .search input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+#interface .navigation .profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#interface .navigation .profile i{
+    margin: 15px;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+
+#interface .navigation .profile img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.n1{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#menu-btn{
+    display: none;
+    color: #2b2b2b;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.i-name{
+    color:#444a53;
+    padding: 30px 30px 0 30px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 70px;
+}
+
+.values{
+    padding: 30px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.values .val-box{
+    background: #fff;
+    width: 235px;
+    padding: 16px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;  
+}
+
+
+
+.board{
+    width: 94%;
+    margin: 30px 0 30px 30px;
+    overflow: auto;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.board img{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.board h5{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.board p{
+    font-weight: 400;
+    font-size: 13px;
+    color: #787d8d;
+}
+
+.board .people {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px solid #eef0f3;
+}
+
+thead td{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: #f9fafb;
+    text-align: start;
+    padding: 15px;
+}
+
+tbody tr td{
+    padding: 10px 15px;
+}
+
+.active p{
+    background: #d7fada;
+    padding: 2px 10px;
+    display: inline-block;
+    border-radius: 40px;
+    color: #2b2b2b;
+}
+
+.edit a {
+    text-decoration: none;
+    font-size: 14px;
+    color:#ff0000;
+    font-weight: 600;
+}
+
+@media (max-width:769px) {
+    #menu{
+        width: 270px;
+        position: fixed;
+        left: -270px;
+        transition: 0.3s ease;
+    }
+    #menu.active{
+        left: 0;
+    }
+    #menu-btn{
+        display: initial;
+    }
+    #interface {
+        width:100%;
+        margin-left:0px;
+        display: inline-block;
+        transition: 0.3s ease;
+    }
+    #menu.active~ #interface{
+        width: calc(100% - 270px);
+        margin-left: 270px;
+        transition: 0.3s ease;
+    }
+    #interface .navigation{
+        width:100%;
+    }
+    .values {
+        padding: 30px 30px 0 30px;
+        justify-content: flex-start;
+    }
+    .values .val-box{
+        padding: 16px 20px;
+        margin: 10px 20px 10px 0;
+    }
+    .board{
+        width: 92%;
+        padding: 0;
+        overflow-x:auto ;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+}
+
+@media (max-width:477px){
+    #interface .naviagtion{
+        padding: 15px;
+    }
+    #interface .navigation .search input{
+        width: 150px;
+    }
+    .i-name{
+        padding: 30px 15px 0 15px;
+    }
+    .values{
+        padding: 30px 15px 0 15px;
+    }
+    .values .val-box{
+        width: 100%;
+        margin: 8px 0;
+    }
+    .board{
+        margin: 30px 15px 30px 15px;
+    }
+}
+
+
+.update{
+    display: flex;
+    background: #fff;
+    padding: 2rem;
+    width: 94%;
+    margin: 2rem;
+    border-radius: 0.5rem;
+}
+
+.update .update-photo img{
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    top: 2rem;
+    left: 3rem;
+}
+
+.update .update-info{
+    margin: 2rem 0 0 15rem;
+}
+.update .update-info label{
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.admin-head{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-left: 5rem;
+    
+}
+.update .update-info input{
+    width: 20rem;
+    margin: 0.5rem 0;
+    padding: 0.3rem 0.5rem;
+    border: 0;
+    outline: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    overflow: hidden;
+}
+.update .update-info button{
+    background: rgb(5, 81, 223);
+    color: #fff;
+    width: auto;
+    height: 2.5rem;
+    position: relative;
+    left: 14rem;
+    bottom: -0.5rem;
+    padding: 0 1rem;
+    border: 0;
+    border-radius: 0.75rem;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.update .update-info button:hover{
+    background: #594ef7;
+}
+
+.course {
+    margin:  0 4rem 2rem 4rem;
+    width: 30%;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    
+}
+
+.course .addCourse{
+    background: #e4e2e2;
+    padding: 1rem 1.7rem;
+    border-radius: 1rem;
+    height: auto;
+}
+.course .addCourse:hover{
+    box-shadow: 0 0 15px #9e9e9e;
+}
+.course input{
+    display: block;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 1px solid #a7a6a6;
+    border-radius: 0.5rem;
+}
+.course input:hover{
+    box-shadow: 0 0 10px rgb(94, 170, 245);
+}
+
+
+.addBtn button {
+    margin: 1rem 0  0 5rem;
+    padding: 0.5rem 1rem;
+    /* padding: 0.75rem; */
+    border: 0;
+    background:rgb(5, 81, 223);
+    color: #fff;
+    border-radius: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+ .addBtn button:hover{
+    background: #594ef7;
+}
+.course .addCourse i::before{
+    margin-right: 0.75rem;
+}
+
+.course .addCourse textarea{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    height: 7rem;
+    width: 15rem;
+    resize: none;
+    outline: 0;
+    border: 1px solid #ccc;
+}
+.course .addCourse textarea:hover{
+    box-shadow: 0 0 15px #ccc;
+}
+.course .addCourse input:nth-last-child(2){
+    border: 0;
+}
+.course .addCourse input:nth-last-child(2):hover{
+    box-shadow: none;
+}
+.course .addCourse input::file-selector-button {
+    background:rgb(5, 81, 223);
+    color: #fff;
+    border-radius: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 1rem;
+    cursor: pointer; 
+}
+.course .addCourse input::file-selector-button:hover{
+    background: #594ef7;
+}
+.course .addCourse .courseBtn button{
+    background:rgb(5, 223, 41);
+    color: #fff;
+    border-radius: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 1rem;
+    cursor: pointer; 
+    margin: 0 1rem;
+}
+.course .addCourse .courseBtn button:hover{
+    background: rgb(56, 241, 56);;
+}
+.course .addCourse .courseBtn button:nth-child(2){
+    background: red;
+}
+.course .addCourse .courseBtn button:nth-child(2):hover{
+    background: rgb(247, 35, 35);
+}
