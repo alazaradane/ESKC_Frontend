@@ -392,10 +392,12 @@ tbody tr td{
 
 .course {
     margin:  0 4rem 2rem 4rem;
-    width: 30%;
+    width: 70%;
     padding: 1.5rem 1rem;
     font-size: 0.9rem;
-    
+}
+.course.hidden{
+    display: none;
 }
 
 .course .addCourse{
@@ -491,4 +493,17 @@ tbody tr td{
 }
 .course .addCourse .courseBtn button:nth-child(2):hover{
     background: rgb(247, 35, 35);
+}
+
+.header--course{
+    margin: 2rem 2rem 2rem 2.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.manage{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }

@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #afacac;
+}
+
+.list{
+    list-style: none;
+    padding-left: 0;
+}
+
+
+.library{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #fff;
+    margin: 5rem;
+    padding: 3rem;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    transition: all 0.3s;
+
+}
+.library:hover{
+    box-shadow: 0 0 2rem #353434;
+}
+.list--tick{
+    list-style-image: url(../images/tick.svg);
+    padding-left: 3rem;
+}
+.list--tick .list__item{
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.library header{
+    text-align:start;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 900;
+   
+
+}
+
+.library header i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.library .library--1,
+.library .library--2,
+.library .library--3{
+    border: 1px solid #ccc;
+    padding: 1rem 3rem;
+}

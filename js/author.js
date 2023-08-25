@@ -2,15 +2,9 @@ $('#menu-btn').click(function(){
     $('#menu').toggleClass("active");
 })
 
-const divCourse= document.querySelector('.course');
-let isClicked =true;
-
-let showCourse = function(){
-    if(isClicked){
-        divCourse.style.display='block';
-        isClicked=false;
-    }else{
-        divCourse.style.display='none';
-        isClicked=true;
-    }
-}
+const toggleButton = document.getElementById("toggle");
+            toggleButton.addEventListener("click", toggle);
+function toggle() {
+    const box = document.getElementById("courseAdd");
+             box.classList.toggle("hidden");
+        }

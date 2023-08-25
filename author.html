@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authors Dashboard</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="./css/author.css">
+    <link rel="stylesheet" href="./css/normalize.css">
     <script src="https://kit.fontawesome.com/14d320e4a1.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
@@ -42,17 +42,44 @@
         <h3 class="i-name">
             Material Managment
         </h3>
-        
-        <div class="addBtn">
-            <button onclick="showCourse()">Add Course</button>
+        <!-- Course Section -->
+    <div class="manage">
+        <div class="column--1">
+            <h3 class="header--course">Course Section</h3>
+            <div class="addBtn">
+                <button id="toggle">Add Course</button>
+            </div>
+            <div class="course" id="courseAdd">
+                <form class="addCourse" >
+                    <label><i class="fa-solid fa-lock">Course ID</i></label>
+                    <input type="text">
+                    <label><i class="fa-solid fa-book">Course Title</i></label>
+                    <input type="text">
+                    <label><i class="fa-solid fa-newspaper">Course Name</i></label>
+                    <input type="text">
+                    <label><i class="fa-solid fa-pen-to-square">Description</i></label>
+                    <textarea>Write Description</textarea>
+                    <label for="myfile"><i class="fa-solid fa-file">Select a File</i></label>
+                    <input type="file" id="myfile" name="myfile" hidden>
+                    <div class="courseBtn">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </div>              
+                </form>
+            </div>
         </div>
-        <div class="course">
+        <div class="column--2">
+            <h3 class="header--course">Material Section</h3>
+        <div class="addBtn">
+            <button id="toggle">Add Material</button>
+        </div>
+        <div class="course" id="courseAdd">
             <form class="addCourse" >
-                <label><i class="fa-solid fa-lock">Course ID</i></label>
+                <label><i class="fa-solid fa-lock">Material ID</i></label>
                 <input type="text">
-                <label><i class="fa-solid fa-book">Course Title</i></label>
+                <label><i class="fa-solid fa-book">Material Title</i></label>
                 <input type="text">
-                <label><i class="fa-solid fa-newspaper">Course Name</i></label>
+                <label><i class="fa-solid fa-newspaper">Material Name</i></label>
                 <input type="text">
                 <label><i class="fa-solid fa-pen-to-square">Description</i></label>
                 <textarea>Write Description</textarea>
@@ -64,6 +91,8 @@
                 </div>              
             </form>
         </div>
+        </div>
+    </div>       
         <div class="board">
             <table width="100%">
                 <thead>
