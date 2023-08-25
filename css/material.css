@@ -8,11 +8,13 @@ body{
 .list{
     list-style: none;
     padding-left: 0;
+    
 }
 
 
+
 .library{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: space-evenly;
     background: #fff;
@@ -21,6 +23,7 @@ body{
     font-size: 1.4rem;
     border-radius: 1rem;
     transition: all 0.3s;
+    height: auto;
 
 }
 .library:hover{
@@ -39,7 +42,7 @@ body{
     text-align:start;
     padding-bottom: 1rem;
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 500;
    
 
 }

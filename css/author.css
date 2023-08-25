@@ -100,6 +100,7 @@ body{
     border-bottom: 3px solid #594ef7;
     position: fixed;
     width: calc(100% - 300px);
+    z-index: 1;
 }
 
 #interface .navigation .search{
@@ -339,6 +340,7 @@ tbody tr td{
     position: relative;
     top: 2rem;
     left: 3rem;
+    
 }
 
 .update .update-info{
@@ -352,7 +354,7 @@ tbody tr td{
 
 .admin-head{
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 700;
     color: #111827;
     margin-left: 5rem;
@@ -506,4 +508,61 @@ tbody tr td{
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+/*Library*/
+.list{
+    list-style: none;
+    padding-left: 0;
+    
+}
+
+
+
+.library{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #fff;
+    margin: 2rem;
+    padding: 3rem;
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    transition: all 0.3s;
+    height: auto;
+    width: 94%;
+
+}
+
+.list--tick{
+    list-style-image: url(../images/tick.svg);
+    padding-left: 3rem;
+}
+.list--tick .list__item{
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.library header{
+    text-align:start;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+   
+
+}
+
+.library header i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.library .library--1,
+.library .library--2,
+.library .library--3{
+    border: 1px solid #ccc;
+    padding: 1rem 3rem;
+}
+
+.library--title{
+
 }
