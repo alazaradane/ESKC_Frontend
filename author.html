@@ -12,7 +12,7 @@
 <body>
     <section id="menu">
         <div class="logo">
-            <img src="images/hauthor.jpg" alt="logo">
+            <img src="images/hauthor.jpg"  alt="logo">
             <h2>Author</h2>
         </div>
         <div class="items">
@@ -50,19 +50,19 @@
                 <button id="toggle">Add Course</button>
             </div>
             <div class="course" id="courseAdd">
-                <form class="addCourse" >
-                    <label><i class="fa-solid fa-lock">Course ID</i></label>
-                    <input type="text">
+                <form class="addCourse" onsubmit="event.preventDefault();onFormSubmit();" >
+                    <label><i class="fa-solid fa-lock">Course ID</i></label> <label class="validation-error hide" id="courseIdValidationError">This field is required.</label>
+                    <input type="text" name="courseId" id="courseId">
                     <label><i class="fa-solid fa-book">Course Title</i></label>
-                    <input type="text">
+                    <input type="text" name="courseTitle" id="courseTitle">
                     <label><i class="fa-solid fa-newspaper">Course Name</i></label>
-                    <input type="text">
+                    <input type="text" name="courseName" id="courseName">
                     <label><i class="fa-solid fa-pen-to-square">Description</i></label>
-                    <textarea>Write Description</textarea>
+                    <textarea name="detail" id="detail">Write Description</textarea>
                     <label for="myfile"><i class="fa-solid fa-file">Select a File</i></label>
                     <input type="file" id="myfile" name="myfile" hidden>
                     <div class="courseBtn">
-                        <button type="submit">Submit</button>
+                        <button type="submit" value="submit">Submit</button>
                         <button type="reset">Reset</button>
                     </div>              
                 </form>
@@ -74,7 +74,7 @@
             <button id="toggle">Add Material</button>
         </div>
         <div class="course" id="courseAdd">
-            <form class="addCourse" >
+            <form class="addCourse">
                 <label><i class="fa-solid fa-lock">Material ID</i></label>
                 <input type="text">
                 <label><i class="fa-solid fa-book">Material Title</i></label>
@@ -94,118 +94,19 @@
         </div>
     </div>       
         <div class="board">
-            <table width="100%">
+            <table width="100%" id="courseList">
                 <thead>
                     <tr>
-                        <td>Name</td>
-                        <td>Action</td>
-                        <td>Date</td>
-                        <td>Role</td>
+                        <th>Course ID</th>
+                        <th>Course Title</th>
+                        <th>Course Name</th>
+                        <th>Description</th>
+                        <th>File</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="people">
-                            <img src="images/Admin_1.jpg" alt="">
-                            <div class="people-de">
-                                <h5>Alazar Adane</h5>
-                                <p>alazaradane418@gmail.com</p>
-                            </div>
-                        </td>
-
-                        <td class="pople-des">
-                            <h5>Data Scientist</h5>
-                            <p>Data Analysis</p>
-                        </td>
-                        <td class="active"><p>Active</p></td>
-                        <td class="role"><p>Owner</p></td>
-                        <td class="edit"> <a href="#">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="images/Admin_1.jpg" alt="">
-                            <div class="people-de">
-                                <h5>Alazar Adane</h5>
-                                <p>alazaradane418@gmail.com</p>
-                            </div>
-                        </td>
-
-                        <td class="pople-des">
-                            <h5>Data Scientist</h5>
-                            <p>Data Analysis</p>
-                        </td>
-                        <td class="active"><p>Active</p></td>
-                        <td class="role"><p>Owner</p></td>
-                        <td class="edit"> <a href="#">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="images/Admin_1.jpg" alt="">
-                            <div class="people-de">
-                                <h5>Alazar Adane</h5>
-                                <p>alazaradane418@gmail.com</p>
-                            </div>
-                        </td>
-
-                        <td class="pople-des">
-                            <h5>Data Scientist</h5>
-                            <p>Data Analysis</p>
-                        </td>
-                        <td class="active"><p>Active</p></td>
-                        <td class="role"><p>Owner</p></td>
-                        <td class="edit"> <a href="#">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="images/Admin_1.jpg" alt="">
-                            <div class="people-de">
-                                <h5>Alazar Adane</h5>
-                                <p>alazaradane418@gmail.com</p>
-                            </div>
-                        </td>
-
-                        <td class="pople-des">
-                            <h5>Data Scientist</h5>
-                            <p>Data Analysis</p>
-                        </td>
-                        <td class="active"><p>Active</p></td>
-                        <td class="role"><p>Owner</p></td>
-                        <td class="edit"> <a href="#">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="images/Admin_1.jpg" alt="">
-                            <div class="people-de">
-                                <h5>Alazar Adane</h5>
-                                <p>alazaradane418@gmail.com</p>
-                            </div>
-                        </td>
-
-                        <td class="pople-des">
-                            <h5>Data Scientist</h5>
-                            <p>Data Analysis</p>
-                        </td>
-                        <td class="active"><p>Active</p></td>
-                        <td class="role"><p>Owner</p></td>
-                        <td class="edit"> <a href="#">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td class="people">
-                            <img src="images/Admin_1.jpg" alt="">
-                            <div class="people-de">
-                                <h5>Alazar Adane</h5>
-                                <p>alazaradane418@gmail.com</p>
-                            </div>
-                        </td>
-
-                        <td class="pople-des">
-                            <h5>Data Scientist</h5>
-                            <p>Data Analysis</p>
-                        </td>
-                        <td class="active"><p>Active</p></td>
-                        <td class="role"><p>Owner</p></td>
-                        <td class="edit"> <a href="#">Delete</a></td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </div>
@@ -213,7 +114,9 @@
         <h3 class="admin-head">Author Profile</h3>
         <div class="update">
             <div class="update-photo">
-                <img src="images/admin_2.jpg" alt="">
+                <img src="images/admin_2.jpg" alt="Profile"  id="profile-pic">
+                <label for="input-file">Update Image</label>
+            <input type="file" accept="images/jpeg, images/png, image/jpg" id="input-file">
             </div>        
                 <div class="update-info">
                     <label for="#">First Name</label>
@@ -264,7 +167,7 @@
         </section>
     </section>
 
-    <script src="author.js">
+    <script src="./js/author.js">
         
     </script>
 </body>
