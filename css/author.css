@@ -5,9 +5,20 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+:root{
+    --back-color: #eceaea;
+    --menu-color: #111827;
+    --white-color: #fff;
+    --thead-color: #d9d9da;
+    --tr-color:#eef0f3;
+    --li-color:rgb(134, 141, 151);
+    --nav-color: #594ef7;
+    --title-color: #444a53;
+}
+
 body{
     width: 100%;
-    background: #eceaea;
+    background: var(--back-color);
     position: relative;
     display: flex;
 }
@@ -16,7 +27,7 @@ body{
 #menu{
     width: 300px;
     height: 100%;
-    background: #111827;
+    background: var(--menu-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -25,7 +36,7 @@ body{
 #menu .logo{
     display: flex;
     align-items: center;
-    color: #fff;
+    color: var(--white-color);
     padding: 30px 0 0 30px;
 }
 #menu .logo img{
@@ -54,11 +65,11 @@ body{
     cursor: pointer;
 }
 #menu .items li:nth-child(1){
-    border-left: 4px solid #fff;
+    border-left: 4px solid var(--third-color);
 }
 
 #menu .items li i{
-    color: rgb(134, 141, 151);
+    color: var(--li-color);
     width: 30px;
     height: 30px;
     line-height: 30px;
@@ -69,7 +80,7 @@ body{
 
 #menu .items li:hover i,
 #menu .items li:hover a{
-    color: #f3f4f6;
+    color: var(--tr-color) ;
 }
 #menu .items li:hover a:nth-child(3){
     color:rgb(202, 32, 32);
@@ -78,7 +89,7 @@ body{
 #menu .items li a{
     text-decoration: none;
     font-weight: 300px;
-    color: rgb(134, 141, 151); 
+    color: var(--li-color); 
     margin-left: 12px;
     transition: 0.3s ease;
 }
@@ -95,9 +106,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff;
+    background: var(--white-color);
     padding: 15px 30px;
-    border-bottom: 3px solid #594ef7;
+    border-bottom: 3px solid var(--nav-color);
     position: fixed;
     width: calc(100% - 300px);
     z-index: 1;
@@ -109,7 +120,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     padding: 10px 14px;
-    border: 1px solid #d7dbe6;
+    border: 1px solid var(--tr-color);
     border-radius: 4px;
 }
 
@@ -152,14 +163,14 @@ body{
 
 #menu-btn{
     display: none;
-    color: #2b2b2b;
+    color: var(--menu-color);
     font-size: 20px;
     cursor: pointer;
     margin-right: 20px;
 }
 
 .i-name{
-    color:#444a53;
+    color:var(--back-color) ;
     padding: 30px 30px 0 30px;
     font-size: 24px;
     font-weight: 700;
@@ -175,7 +186,7 @@ body{
 }
 
 .values .val-box{
-    background: #fff;
+    background: var(--white-color);
     width: 235px;
     padding: 16px 20px;
     border-radius: 5px;
@@ -188,27 +199,8 @@ body{
     width: 94%;
     margin: 30px 0 30px 30px;
     overflow: auto;
-    background: #fff;
+    background: var(--white-color);
     border-radius: 8px;
-}
-
-.board img{
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.board h5{
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.board p{
-    font-weight: 400;
-    font-size: 13px;
-    color: #787d8d;
 }
 
 table {
@@ -216,14 +208,14 @@ table {
 }
 
 tr{
-    border-bottom: 1px solid #eef0f3;
+    border-bottom: 1px solid  var(--tr-color);
 }
 
 thead th{
     font-size: 17px;
     font-weight: 600;
     text-transform: capitalize;
-    background: #f9fafb;
+    background: var(--thead-color);
     text-align: start;
     padding: 15px;
 }
@@ -234,7 +226,7 @@ tbody tr td{
 
 tbody button{
     cursor: pointer;
-    color: #fff;
+    color: var(--white-color);
     padding: 0.5rem;
     margin-right: 4px;
     background: #1df509;
@@ -329,7 +321,7 @@ label.validation-error{
 
 .update{
     display: flex;
-    background: #fff;
+    background: var(--white-color);
     padding: 2rem;
     width: 94%;
     margin: 2rem;
@@ -351,7 +343,7 @@ label.validation-error{
     display: block;
     width: 150px;
     background: rgb(5, 81, 223);
-    color: #fff;
+    color: var(--white-color);
     padding: 10px 8px;
     margin: 10px auto;
     border-radius: 5px;
@@ -374,7 +366,7 @@ label.validation-error{
     display: block;
     font-size: 1.7rem;
     font-weight: 700;
-    color: #111827;
+    color: var(--menu-color);
     margin-left: 5rem;
     
 }
@@ -390,7 +382,7 @@ label.validation-error{
 }
 .update .update-info button{
     background: rgb(5, 81, 223);
-    color: #fff;
+    color: var(--white-color);
     width: auto;
     height: 2.5rem;
     position: relative;
@@ -421,7 +413,7 @@ label.validation-error{
 }
 
 .course .addCourse{
-    background: #e4e2e2;
+    background: var(--thead-color);
     padding: 1rem 1.7rem;
     border-radius: 1rem;
     height: auto;
@@ -448,7 +440,7 @@ label.validation-error{
     /* padding: 0.75rem; */
     border: 0;
     background:rgb(5, 81, 223);
-    color: #fff;
+    color: var(--white-color);
     border-radius: 2rem;
     font-size: 1rem;
     text-align: center;
@@ -481,7 +473,7 @@ label.validation-error{
 }
 .course .addCourse input::file-selector-button {
     background:rgb(5, 81, 223);
-    color: #fff;
+    color: var(--white-color);
     border-radius: 2rem;
     font-size: 1rem;
     text-align: center;
@@ -495,7 +487,7 @@ label.validation-error{
 }
 .course .addCourse .courseBtn button{
     background:rgb(5, 223, 41);
-    color: #fff;
+    color: var(--white-color);
     border-radius: 2rem;
     font-size: 1rem;
     text-align: center;
@@ -541,7 +533,7 @@ label.validation-error{
     display: inline-flex;
     align-items: center;
     justify-content: space-evenly;
-    background: #fff;
+    background: var(--white-color);
     margin: 2rem;
     padding: 3rem;
     font-size: 1.4rem;
@@ -577,7 +569,74 @@ label.validation-error{
 .library .library--1,
 .library .library--2,
 .library .library--3{
-    border: 1px solid #ccc;
+    border: 1px solid var(--thead-color);
     padding: 1rem 3rem;
 }
+
+/*Update Profile*/
+
+#change--profile .update{
+    background: url(../images/update-back.jpg);
+}
+
+.new{
+    display: block;
+    padding: 50px 10px;
+    margin: 0 auto;
+    height: auto;
+    width: 40%;
+}
+
+.new h1{
+    color: #fff;
+    margin: 0 0 2rem 1rem;
+}
+
+.new .form--info{
+    display: block;
+    margin: 1rem 0;
+}
+
+.new .form--info label{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+}
+.new .form--info input{
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    outline: 0;
+    width: 20rem;
+    transition: all 0.3s;
+    background: none;
+}
+::placeholder{
+    color: #e7e5e5;
+}
+.new .form--info input:hover{
+    box-shadow: 0 0 8px dodgerblue;
+}
+
+.form--info button{
+    margin-top: 1rem;
+    padding: 0.65rem 1rem;
+    width: 90%;
+    background: none;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.form--info button:hover{
+    opacity: 0.75;
+    box-shadow: 0 0 6px dodgerblue;
+}
+
+
 

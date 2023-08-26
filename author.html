@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="profile">
-                <i class="fa-solid fa-pen-nib"></i>
+                <i class="fa-solid fa-gear"></i>
                 <img src="images/Admin_1.jpg" alt="Admin">
             </div>
         </div>
@@ -120,7 +120,7 @@
             </div>        
                 <div class="update-info">
                     <label for="#">First Name</label>
-                    <input type="text"><br>
+                    <p id="profile-pic"></p><br>
                     <label for="#">Last Name</label>
                     <input type="text"><br>
                     <label for="#">Email</label>
@@ -129,9 +129,36 @@
                     <input type="date"><br>
                     <label for="#">Password</label>
                     <input type="password"><br>
-                    <button type="submit" >Update</button>
+                    <button type="submit" onclick="hideShow()">Update</button>
                 </div>
         </div>
+        <div id="change--profile">
+        <div class="update">
+            <form action="#" id="new" class="new">
+                <h1>Update Profile</h1>
+                <div class="form--info">
+                    <label>Update Email</label><br><br>
+                    <input type="text" placeholder="Update Email" id="input-file">
+                </div>   
+                <div class="form--info">
+                    <label>Previous Password</label><br><br>
+                    <input type="text" placeholder="Enter Old Password">
+                </div>   
+                <div class="form--info">
+                    <label>New Password</label><br><br>
+                    <input type="text" placeholder="Enter New Password">
+                </div>   
+                <div class="form--info">
+                    <label>Confirm Password</label><br><br>
+                    <input type="text" placeholder="Confirm New Password">
+                </div>
+                <div class="form--info">
+                    <button type="submit">Update Profile</button>
+                </div>
+            </form>
+        </div>
+        </div>
+        
         <header class="admin-head">Library</header>
         <section class="library">
             <section class="library--1">

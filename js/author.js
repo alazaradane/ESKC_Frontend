@@ -102,3 +102,21 @@ function validate() {
     }
     return isValid;
 }
+
+//Update--Profile Section
+
+var form = document.getElementById('change--profile');
+var display=1;
+
+function hideShow(){
+    if(display==0){
+        form.style.display ='block';
+        display =1;
+    }
+    else{
+        form.style.display ='none';
+        display=0;
+    }
+};
+
+
